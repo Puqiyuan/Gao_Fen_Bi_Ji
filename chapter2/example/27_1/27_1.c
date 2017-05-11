@@ -1,13 +1,15 @@
 /*
   Test result:
-
-  pqy@sda1:~/.../27_1$ gcc 27_1.c 
-pqy@sda1:~/.../27_1$ ./a.out 
-All elements:
-34 23 0 1 999 
-The length of the list: 5.
-23 is in: 2.
-19 is in: -1.
+  pqy@sda1:~/.../27_1$ gcc 27_1.c
+  pqy@sda1:~/.../27_1$ ./a.out 
+  All elements:
+  34 23 0 1 999 
+  The length of the list: 5.
+  23 is in: 2.
+  19 is in: -1.
+  pqy@sda1:~/.../27_1$ 
+  [pqy@sda1:0]  0:ss-local 1:bash                                            2.05 24% Thu 2017-05-11 22:00
+  
  */
 
 #include <stdio.h>
