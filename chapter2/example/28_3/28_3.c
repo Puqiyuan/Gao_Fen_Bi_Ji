@@ -29,7 +29,7 @@ int merge(LNode *A, LNode *B, LNode *C)
 
   LNode *r;
 
-  C ->next = A;
+  C -> next = A;
 
   C -> next = NULL;
   r = C;
