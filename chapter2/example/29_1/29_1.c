@@ -1,3 +1,15 @@
+/*
+  test result:
+  pqy@sda1:~/.../29_1$ gcc 29_1.c 
+  pqy@sda1:~/.../29_1$ ./a.out 
+  Before insert:
+  34 78 1 -1245 9 
+  After insert:
+  34 78 1 -1245 9 
+  pqy@sda1:~/.../29_1$ 
+  [pqy@sda1:0]  0:29_1.c 1:bash 2:28_3.c                                     1.36 43% Tue 2017-05-23 21:32
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
