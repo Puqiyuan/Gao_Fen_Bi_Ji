@@ -1,4 +1,5 @@
 /*
+  Test result:
   pqy@sda1:~/.../33_1$ gcc 33_1.c
   pqy@sda1:~/.../33_1$ ./a.out 
   After insert:
