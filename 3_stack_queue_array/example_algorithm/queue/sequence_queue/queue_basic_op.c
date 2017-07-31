@@ -1,3 +1,40 @@
+/*
+  Test result:
+  pqy7172@debian:~/.../sequence_queue$ ls               
+  p65-66  queue_basic_op.c                                                        
+  pqy7172@debian:~/.../sequence_queue$ gcc queue_basic_op.c                       
+  pqy7172@debian:~/.../sequence_queue$ ./a.out                                    
+  Init status: 1.
+  The value of front: 0.                 
+  The value of rear: 0.
+  
+  The SqQueue is empty.   
+
+  Element 0 enQueue: OK.  
+  Element 1 enQueue: OK.  
+  Element 2 enQueue: OK.  
+  Element 3 enQueue: OK.  
+  Element 4 enQueue: OK.  
+  Element 5 enQueue: OK.  
+  Element 6 enQueue: OK.  
+  Element 7 enQueue: Failed.                      
+  The queue is full.
+
+  DeQueue element 0: OK.
+  DeQueue element 1: OK.
+  DeQueue element 2: OK.
+  DeQueue element 3: OK.
+  DeQueue element 4: OK.
+  DeQueue element 5: OK.
+  DeQueue element 6: OK.
+  DeQueue element 6: Failed.
+  The queue is empty.
+  DeQueue element 6: Failed.
+  The queue is empty.
+  pqy7172@debian:~/.../sequence_queue$
+  [pqy7172@debian:0] 0:less 1:[tmux]                                  0.24 61% Mon 2017-07-31 16:59
+ */
+
 #include <stdio.h>
 #define maxSize 8
 
@@ -39,6 +76,18 @@ int enQueue(SqQueue *qu, int x)
 }
 
 
+int deQueue(SqQueue *qu, int *x)
+{
+	if (qu -> front == qu -> rear)
+		return 0;
+
+	qu -> front = (qu -> front + 1) % maxSize;
+	*x = qu -> data[qu -> front];
+
+	return 1;
+}
+
+
 int main(int argc, char *argv[])
 {
 	SqQueue qu;
@@ -74,7 +123,23 @@ int main(int argc, char *argv[])
 		}
 
 	printf("\n");
-		
+
+	int x;
+
+	for (i = 0; i <= 8; i++)
+		{
+			if (deQueue(&qu, &x))
+				{
+					printf("DeQueue element %d: OK.\n", x);
+					continue;
+				}
+			else
+				{
+					printf("DeQueue element %d: Failed.\n",
+					       x);
+					printf("The queue is empty.\n");
+				}
+		}
 	
 	return 0;
 }
