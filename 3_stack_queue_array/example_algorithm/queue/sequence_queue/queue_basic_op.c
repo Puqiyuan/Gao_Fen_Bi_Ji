@@ -18,3 +18,13 @@ int InitQueue(SqQueue *qu)
 }
 
 
+int main(int argc, char *argv[])
+{
+	SqQueue qu;
+
+	printf("Init status: %d.\n", InitQueue(&qu));
+	printf("The value of front: %d.\n", qu.front);
+	printf("The value of rear: %d.\n", qu.rear);
+	
+	return 0;
+}
