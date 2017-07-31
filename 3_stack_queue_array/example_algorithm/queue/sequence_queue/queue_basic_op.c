@@ -18,6 +18,15 @@ int InitQueue(SqQueue *qu)
 }
 
 
+int QueueEmpty(SqQueue qu)
+{
+	if (qu.front == qu.rear)
+		return 1;
+
+	return 0;
+}
+
+
 int main(int argc, char *argv[])
 {
 	SqQueue qu;
@@ -25,6 +34,12 @@ int main(int argc, char *argv[])
 	printf("Init status: %d.\n", InitQueue(&qu));
 	printf("The value of front: %d.\n", qu.front);
 	printf("The value of rear: %d.\n", qu.rear);
+
+	if (QueueEmpty(qu))
+		printf("The SqQueue is empty.\n");
+	else
+		printf("The SqQueue is not empty.\n");
+		
 	
 	return 0;
 }
