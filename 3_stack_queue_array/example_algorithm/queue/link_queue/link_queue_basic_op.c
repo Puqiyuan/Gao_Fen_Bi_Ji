@@ -1,3 +1,26 @@
+/*
+  Test result:
+  pqy7172@debian:~/.../link_queue$ make
+  gcc link_queue_basic_op.c -o test
+  ./test
+  Init link queue: OK.
+  front: (nil), rear: (nil).
+
+  The queue is empty.
+
+  The element -1 enQueue: OK.
+  The element 0 enQueue: OK.
+  The element 99 enQueue: OK.
+
+  deQueue element is OK, value: -1
+  deQueue element is OK, value: 0
+  deQueue element is OK, value: 99
+  deQueue element is Failed.
+  pqy7172@debian:~/.../link_queue$ 
+  [pqy7172@debian:0] 0:less 1:bash                                    0.13 68% Tue 2017-08-01 16:31
+*/
+
+
 #include <stdio.h>
 #include <stdlib.h>
 
