@@ -15,4 +15,5 @@
 	近目录名可得知。
 	修改算法实现（操作）文件名的命名惯例。算法操作的文件名如queue_basic_op文件名范式，
 	queue位置代表的是数据结构类型，basic意味该数据结构的基本算法操作。op为operation的简记。
-	
+	从3_stack_queue_array/example_algorithm/queue/link_queue/起加入Makefile，方便编译与运
+	行。
