@@ -53,6 +53,27 @@ int enQueue(LiQueue *lqu, int x)
 }
 
 
+int deQueue(LiQueue *lqu, int *x)
+{
+	QNode *p;
+	if (lqu -> rear == NULL)
+		return 0;
+	else
+		p = lqu -> front;
+
+	if (lqu -> front == lqu -> rear)
+		lqu -> front = lqu -> rear = NULL;
+
+	else
+		lqu -> front = lqu -> front -> next;
+
+	*x = p -> data;
+	free(p);
+	
+	return 1;
+}
+
+
 int main(int argc, char *argv[])
 {
 	LiQueue lqu;
@@ -77,6 +98,15 @@ int main(int argc, char *argv[])
 			printf("The element %d enQueue: OK.\n", x[i]);
 		}
 	printf("\n");
+
+	int *d;
+	for (i = 0; i <= 3; i++)
+		{
+			if(deQueue(&lqu, d))
+				printf("deQueue element is OK, value: %d\n",*d);
+			else
+				printf("deQueue element is Failed.\n");
+		}
 	
 	return 0;
 }
