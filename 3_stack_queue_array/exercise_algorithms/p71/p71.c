@@ -1,3 +1,42 @@
+/*
+  Test result:
+
+  pqy7172@debian:~/.../p71$ make               
+  gcc -Wall p71.c -o test  
+  ./test
+  Test for InitStack:         
+  Init stack: OK, bottom1: -1, bottom2: 10.                                       
+
+  Test for push operation:                                       
+  push element 0: OK.                                                             
+  push element 1: OK.     
+  push element 2: OK.     
+  push element 3: OK.     
+  push element 4: OK.     
+  push element 5: OK.     
+  push element 6: OK.     
+  push element 7: OK.     
+  push element 8: OK.     
+  push element 9: OK.     
+  Sorry the stack is full.
+
+  Test for pop operation: 
+  Pop element 0 of stack 0: OK, value: 8.         
+  Pop element 1 of stack 1: OK, value: 9.         
+  Pop element 2 of stack 0: OK, value: 6.
+  Pop element 3 of stack 1: OK, value: 7.
+  Pop element 4 of stack 0: OK, value: 4.
+  Pop element 5 of stack 1: OK, value: 5.
+  Pop element 6 of stack 0: OK, value: 2.
+  Pop element 7 of stack 1: OK, value: 3.
+  Pop element 8 of stack 0: OK, value: 0.
+  Pop element 9 of stack 1: OK, value: 1.
+  The stack 0 is empty.
+  pqy7172@debian:~/.../p71$
+  [pqy7172@debian:0] 0:less 1:[tmux]                                  0.54 71% Thu 2017-08-03 11:15
+ */
+
+
 #include <stdio.h>
 #include <stdlib.h>
 
