@@ -131,12 +131,12 @@ int test_pop(SqStack *st)
 				{
 					if (stNo == 0)
 						{
-							printf("Pop element %d of stack 0: OK, value: %d\n.", i, *x);
+							printf("Pop element %d of stack 0: OK, value: %d.\n", i, *x);
 							continue;
 						}
 					else if (stNo == 1)
 						{
-							printf("Pop element %d of stack 1: OK, value: %d\n.", i, *x);
+							printf("Pop element %d of stack 1: OK, value: %d.\n", i, *x);
 							continue;
 						}
 					
@@ -147,7 +147,7 @@ int test_pop(SqStack *st)
 					if (stNo == 0)
 						printf("The stack 0 is empty.\n");
 
-					else
+					else if (stNo == 1)
 						printf("The stack 1 is empty.\n");
 				}
 
@@ -171,6 +171,9 @@ int main(int argc, char *argv[])
 
 	printf("Test for push operation:\n");
 	test_push(&st);
+
+	printf("Test for pop operation:\n");
+	test_pop(&st);
 	
 	return 0;
 }
