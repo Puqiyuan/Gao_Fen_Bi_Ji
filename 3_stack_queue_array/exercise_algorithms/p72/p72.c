@@ -111,6 +111,15 @@ int dequeue(SqStack *s2, SqStack *s1, int *x)
 }
 
 
+int queue_empty(SqStack *s1, SqStack *s2)
+{
+	if (isEmpty(s1) && isEmpty(s2))
+		return 1;
+
+	return 0;
+}
+
+
 int main(int argc, char *argv[])
 {
 	SqStack s1, s2;
@@ -143,6 +152,13 @@ int main(int argc, char *argv[])
 			else
 				printf("Dequeue element %d: Failed.\n", i);
 		}
+	printf("\n");
+
+	printf("Test for queue empty operation:\n");
+	if (queue_empty(&s1, &s2))
+		printf("The queue is empty.\n");
+	else
+		printf("The queue is not empty.\n");
 
 	
 	
