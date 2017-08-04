@@ -1,3 +1,41 @@
+/*
+  Test result:
+
+  pqy7172@debian:~/.../p72$ make                                            
+  gcc -Wall p72.c -o test
+  ./test                                                                          
+  Test for enqueue operation:                    
+  Enqueue element 0: OK, value: 2.                                            
+  Enqueue element 1: OK, value: 4.                                                
+  Enqueue element 2: OK, value: 1.                                               
+  Enqueue element 3: OK, value: 0.                             
+  Enqueue element 4: OK, value: -1.               
+  Enqueue element 5: OK, value: 99.               
+  Enqueue element 6: OK, value: 101.              
+  Enqueue element 7: OK, value: -12.              
+  Enqueue element 8: OK, value: 3.                
+  Enqueue element 9: OK, value: 78.               
+  Enqueue element 10: Failed, value: 999.         
+
+  Test for dequeue operation:                     
+  Dequeue element 0: OK, value: 2.                
+  Dequeue element 1: OK, value: 4.                
+  Dequeue element 2: OK, value: 1.                
+  Dequeue element 3: OK, value: 0.
+  Dequeue element 4: OK, value: -1.
+  Dequeue element 5: OK, value: 99.
+  Dequeue element 6: OK, value: 101.
+  Dequeue element 7: OK, value: -12.
+  Dequeue element 8: OK, value: 3.
+  Dequeue element 9: OK, value: 78.
+  Dequeue element 10: Failed.
+
+  Test for queue empty operation:
+  The queue is empty.
+  pqy7172@debian:~/.../p72$
+  [pqy7172@debian:0] 0:less 1:[tmux]                                  0.27 74% Fri 2017-08-04 16:00
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 
