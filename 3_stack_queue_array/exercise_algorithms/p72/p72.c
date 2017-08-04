@@ -81,6 +81,36 @@ int enqueue(SqStack *s1, SqStack *s2, int x)
 }
 
 
+int dequeue(SqStack *s2, SqStack *s1, int *x)
+{
+	int *y = (int*)malloc(sizeof(int));
+
+	if (!isEmpty(s2))
+		{
+			pop(s2, x);
+			return 1;
+		}
+
+	else
+		{
+			if (isEmpty(s1))
+				return 0;
+
+			else
+				{
+					while (!isEmpty(s1))
+						{
+							pop(s1, y);
+							push(s2, *y);
+						}
+					pop(s2, x);
+				}
+		}
+
+	return 1;
+}
+
+
 int main(int argc, char *argv[])
 {
 	SqStack s1, s2;
@@ -90,16 +120,31 @@ int main(int argc, char *argv[])
 	
 	int x[11] = {2, 4, 1, 0, -1, 99, 101, -12, 3, 78, 999}, i;
 
+	printf("Test for enqueue operation:\n");
 	for (i = 0; i <= 10; i++)
 		{
 			if (enqueue(&s1, &s2, x[i]) == 1)
 				printf("Enqueue element %d: OK, value: %d.\n",
 				       i, x[i]);
 
-						else
+			else
 				printf("Enqueue element %d: Failed, value: %d.\n",
 				       i, x[i]);
 		}
+	printf("\n");
+
+	printf("Test for dequeue operation:\n");
+	int *d = (int*)malloc(sizeof(int));
+	for (i = 0; i <= 10; i++)
+		{
+			if (dequeue(&s2, &s1, d) == 1)
+				printf("Dequeue element %d: OK, value: %d.\n",
+				       i, *d);
+			else
+				printf("Dequeue element %d: Failed.\n", i);
+		}
+
+	
 	
 	return 0;
 }
