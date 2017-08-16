@@ -36,6 +36,28 @@ int EnQueue(LNode *rear, int x)
 }
 
 
+int DeQueue(LNode *rear, int *x)
+{
+	LNode *s;
+
+	if (rear -> next == rear)
+		return 0;
+
+	else
+		{
+			s = rear -> next -> next;
+			rear -> next -> next = s -> next;
+			*x = s -> data;
+
+			if (s == rear)
+				rear = rear -> next;
+			//			free(s);
+		}
+
+	return 1;
+}
+
+
 int main(int argc, char *argv[])
 {
 	loop_queue Qu;
@@ -43,7 +65,12 @@ int main(int argc, char *argv[])
 	init_queue(&Qu);
 	
 	EnQueue(Qu.rear, 2);
+	printf("Enqueu 2: OK.\n");
+	
+	int x;
+	
+	DeQueue(Qu.rear, &x);
+	printf("The first element dequeue: %d.\n", x);
 		
 	return 0;
 }
-
