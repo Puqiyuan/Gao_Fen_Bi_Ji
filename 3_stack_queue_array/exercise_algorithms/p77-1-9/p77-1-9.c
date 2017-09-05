@@ -1,3 +1,16 @@
+/*
+  Test result:
+  pqy7172@debian:~/.../p77-1-9$ make run 
+  gcc -Wall p77-1-9.c -o test
+  ./test
+  Please input a number:
+  12
+  The binary form of this number:
+  1100
+  pqy7172@debian:~/.../p77-1-9$ 
+  [pqy7172@debian:0] 0:bash                                           0.16 69% Tue 2017-09-05 20:48
+ */
+
 #include <stdio.h>
 #define maxSize 999999
 
