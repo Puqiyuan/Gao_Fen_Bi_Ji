@@ -1,10 +1,8 @@
-PROGRAM=p77_1_9.c
+PROGRAM=p77-1-9.c
 
-run: test
-	./test
-
-test:
+run:
 	gcc -Wall $(PROGRAM) -o test
+	./test
 
 clean:
 	rm test -f
