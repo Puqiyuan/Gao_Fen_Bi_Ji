@@ -1,12 +1,28 @@
 /*
 	Test result:
 	~/.../example_algorithms$ make
-	gcc string_basic_op.c -o test
 	./test
-	test for strassign() function:
-	this is a assign string.
+	1. test for strassign() function:
+	this is a assign string
+
+	2. test for strlength() function:
+	the testing string is: 'this is a assign string', it's length is 23
+
+	3. test for strcompare() function:
+	st1: this is string1
+	st2: this is string2 this is string2
+	the compare result of st1 and st2: -1
+
+	4. test for concat() function:
+	after concat of st1 and st2: this is string1this is string2 this is string2
+
+	5. test for substring() function:
+	get 8 chars after third char of st2: is is st
+
+	6. test for clearstring() function:
+	after free of st2: (null)
 	~/.../example_algorithms$ 
-	[pqy7172@debian:0] 0:ss-local 1:bash                                                0.59 99% Fri 2018-10-05 21:10
+	[pqy7172@debian:0] 0:ss-local 1:bash                                               1.67 100% Sat 2018-10-06 20:59
 */
 
 #include <stdio.h>
