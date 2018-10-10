@@ -6,7 +6,7 @@
 */
 
 #include <stdio.h>
-#include "../example_algorithms/string_basic_op.c"
+#include "../basic_algorithms/string_basic_op.c"
 
 void trans(Str *str, char ch1, char ch2)
 {
