@@ -25,6 +25,7 @@ exercise_algorithms与example_algorithms两个目录，在每个目录下，举�
 简记。从3_stack_queue_array/example_algorithm/queue/link_queue/起加入Makefile，方便编译与
 运行。
 
-文本文件都没有.txt后缀，这之于Windows系统可能有些麻烦，可以通过以下几种方式解决：
+文本文件都没有.txt后缀，比如我自定义了算法描述文件以.des结尾，它是英文单词description的前
+三个字母，这些情况之于Windows系统可能有些麻烦，可以通过以下几种方式解决：
 1，在Github网页上查看。
 2，在Windows系统中修改这样的文件名，加上.txt后缀。
