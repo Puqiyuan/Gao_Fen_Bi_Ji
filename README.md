@@ -1,4 +1,5 @@
 # Gao_Fen_Bi_Ji
+
 更新命名方式：
 算法描述文件以*.des结尾而对应的C语言实现为*.c，此新命名方式由4_string开始生效，并且自
 4_string开始，example_algorithms更名为basic_algorithms，而exercise_algorithms更名为
@@ -29,3 +30,7 @@ exercise_algorithms与example_algorithms两个目录，在每个目录下，举�
 三个字母，这些情况之于Windows系统可能有些麻烦，可以通过以下几种方式解决：
 1，在Github网页上查看。
 2，在Windows系统中修改这样的文件名，加上.txt后缀。
+
+随着项目的推进，会对项目的命名以及组织等作出合理该有的调整，这些调整只是对后兼容，而不对前
+兼容，当然能对前兼容更好，但我的精力是有限的，如果你有兴趣参与进来可以做做这部分的工作，这
+样你也可以加深对某些数据结构、算法的理解。
