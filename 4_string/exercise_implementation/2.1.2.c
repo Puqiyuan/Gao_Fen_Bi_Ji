@@ -1,3 +1,10 @@
+/*
+	test result:
+	~/.../exercise_implementation$ ./a.out 
+	before invert: hello, world!
+	after invert: !dlrow ,olleh
+*/
+
 #include <stdio.h>
 #include "../basic_algorithms/string_basic_op.c"
 
