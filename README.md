@@ -1,6 +1,8 @@
 # Gao_Fen_Bi_Ji
 更新命名方式：
-算法描述文件以*.des结尾而对应的C语言实现为*.c。
+算法描述文件以*.des结尾而对应的C语言实现为*.c，此新命名方式由4_string开始生效，并且自
+4_string开始，example_algorithms更名为basic_algorithms，而exercise_algorithms更名为
+exercise_implementation。
 
 此项目用于实现考研数据结构参考书籍高分笔记里面的算法题目。每章都有一个目录，每个目录下有
 exercise_algorithms与example_algorithms两个目录，在每个目录下，举例来说, "1_3"代表题目，而
